@@ -1,32 +1,36 @@
+.tag-shared-style {
+    padding: 2px 5px;
+    border-radius: 2px;
+    font-family: Arial;
+    /* font-size: 16px; */
+}
+
 .int {
     color: #bbff79;
     background-color: #2e3832;
-    padding: 2px 5px;
-    border-radius: 2px;
-    font-family: Arial;
-
 }
 
-.constexpr {
+.type {
     color: #e59752;
     background-color: #362f2e;
-    padding: 2px 5px;
-    border-radius: 2px;
-    font-family: Arial;
 }
 
 .void {
     color: #d1a8ff;
     background-color: #312f3e;
-    padding: 2px 5px;
-    border-radius: 2px;
-    font-family: Arial;
 }
 
 .default {
     color: #ff7b7b;
     background-color: #3a2e2e;
-    padding: 2px 5px;
-    border-radius: 2px;
-    font-family: Arial;
+}
+
+.double {
+    color: #36a3dd;
+    background-color:  #234753;
+}
+
+.Qu {
+    color: #c9c325;
+    background-color: #32300f;
 }
