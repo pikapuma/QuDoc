@@ -25,6 +25,11 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      # permalink: true
+      # title: On this page
+      # permalink_title: Anchor link to this section for reference
+      toc_depth: 1
 
 
 
@@ -59,7 +64,7 @@ theme:
     - navigation.expand
     - navigation.path
     - navigation.prune
- 
+
 extra_css:
   - scripts/style.css
 

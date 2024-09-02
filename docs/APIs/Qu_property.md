@@ -39,7 +39,7 @@
 
 
     <hr>
-    ##<code>fill(<t-void></t-void><t-default>dis</t-default><t-int>int</t-int>)</code>
+    ##<code>fill(<t-void></t-void>·<t-default>dis</t-default>·<t-int>int</t-int>)</code>
     <t-qu>Qu</t-qu>
 
     将`Qu`填充为指定的值。将会返回`*this`，以便链式调用。
@@ -179,7 +179,7 @@
         !!! Example
             ``` cpp
             Qu<dim<2,2>, Qu<>> mat = {1, 2, 3, 4};
-            std::cout << mat[0][1] << std::endl;
+            std::cout << mat[0, 1] << std::endl;
             ```
 
             输出：
@@ -261,7 +261,7 @@
         ```
 
     <hr>
-    ##‘operator <<’
+    ##`operator <<`
     <t-default>ofstream</t-default>
 
     重载`<<`运算符，用于输出到流。不同于`toDouble()`，这里的打印会尽可能地保持一个工整的格式。
