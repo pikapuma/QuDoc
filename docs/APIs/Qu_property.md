@@ -123,11 +123,22 @@
     ##<code>operator = <t-default>Any</t-default></code>
     <t-qu>Qu</t-qu>
 
-    重载`=`运算符，用于赋值。可以从`Qu`赋值给`Qu`，也可以从任意实数类型赋值给`Qu`，比如`int`、`double`等。
+    重载`=`运算符，用于赋值。
 
-    当然了虽然说是"Any", 但是别整烂活传点奇怪的东西进去。
+    这里的<t-default>Any</t-default>可以是任何数值类型。
+    
+    可以从<t-qu>Qu</t-qu>赋值给<t-qu>Qu</t-qu>，也可以从任意实数类型赋值给<t-qu>Qu</t-qu>，比如`int`、`double`等。
 
-    需要注意的是，来自同样配置的`Qu`时会直接拷贝`data`，而来自不同配置的`Qu`时会进行转换，此时将会进行量化和溢出判断。
+    需要注意的是，来自同样配置的<t-qu>Qu</t-qu>时会直接拷贝`data`，而来自不同配置的<t-qu>Qu</t-qu>时会进行转换，此时将会进行量化和溢出判断。
+
+    !!! Example
+        ``` cpp
+        Qu<intBits<4>, fracBits<4>, isSigned<true>> a;
+        a = 0.92;
+        
+        Qu<intBits<3>, fracBits<3>, isSigned<true>> b;
+        b = a; // 会进行量化和溢出判断
+        ```
 
 
      

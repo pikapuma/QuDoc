@@ -30,6 +30,9 @@ markdown_extensions:
       # title: On this page
       # permalink_title: Anchor link to this section for reference
       toc_depth: 1
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 
 
