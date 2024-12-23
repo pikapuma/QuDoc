@@ -1,6 +1,5 @@
 site_name: QuBLAS
 
-
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -22,9 +21,9 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - def_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  #- pymdownx.emoji:
+  #  emoji_index: !!python/name:material.extensions.emoji.twemoji
+  #  emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       # permalink: true
       # title: On this page
@@ -34,9 +33,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-
-
-theme: 
+theme:
   name: material
   palette:
     scheme: slate
@@ -55,7 +52,7 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
-      
+
     annotation: material/circle-medium
 
   features:
