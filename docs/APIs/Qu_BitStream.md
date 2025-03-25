@@ -1,7 +1,7 @@
 # BitStream函数
 <hr>
 
-#### <code><span>std::string Bitstream</span><<t-qu>elemProcessT</t-qu>>(<t-qu>Qu</t-qu><T...\> const&) </code>  <br> <code><span>ResultT Bitstream</span><<t-qu>ResultT</t-qu>, <t-qu>elemProcessT</t-qu>>(std::string const&) </code> <br> <code><span>std::string Bitstream</span><<t-qu>tensorProcessT</t-qu>, <t-qu>elemProcessT</t-qu>>(<t-qu>Qu</t-qu><T...\> const&) </code> <br> <code><span>ResultT Bitstream</span><<t-qu>ResultT</t-qu>, <t-qu>tensorProcessT</t-qu>, <t-qu>elemProcessT</t-qu>>(std::string const&)</code>
+#### <code><span>std::string Bitstream</span><<t-qu>elemProcessT</t-qu>>(<t-qu>Qu</t-qu><T...\> const&); </code>  <br> <code><span>ResultT Bitstream</span><<t-qu>ResultT</t-qu>, <t-qu>elemProcessT</t-qu>>(std::string const&); </code> <br> <code><span>std::string Bitstream</span><<t-qu>tensorProcessT</t-qu>, <t-qu>elemProcessT</t-qu>>(<t-qu>Qu</t-qu><T...\> const&); </code> <br> <code><span>ResultT Bitstream</span><<t-qu>ResultT</t-qu>, <t-qu>tensorProcessT</t-qu>, <t-qu>elemProcessT</t-qu>>(std::string const&);</code>
 
 `BitStream()`函数实现`Qu`对象与`std::string`的相互转换，其中`elemProcessT`指定按何种顺序处理每个标量元素，`tensorProcessT`指定按何种顺序读取张量的元素（不能在输入为标量类型`Qu`时使用），`ResultT`为转换的结果类型（即`Qu<...>`类型，只能在输入为字符串时使用）。
 
@@ -26,7 +26,7 @@
   
   !!! Warning
     - 使用`Bitstream()`函数需要编程者自行保证转换是合理的。例如，不能把一个长度为6的字符串`"000111"`转换为元素个数为2，单个元素位宽为6的张量`Qu<dim<2>, isSigned<true>, intBits<5>, fracBits<0>>`类型（源字符串位数不够）；不能以`elemProcessT = r2l<5>`的方式将一个`Qu<isSigned<true>, intBits<11>, fracBits<0>>`的`Qu`变量转化为字符串（`Qu`变量的长度12无法被5整除）。
-    不合理转换的结果未定义，可能抛出异常或得到错误结果。
+    - 不合理转换的结果未定义，可能抛出异常或得到错误结果。
 
   !!! Example
     #### 将`2*3`的二维张量v逆序（`tensorProcessT = r2l<1>`）转化为字符串，再将字符串转换为元素为复数的一维张量`Qu<T...>`
